@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valeska Calazans | Arquitetura & Sobrancelhas</title>
+<meta name="description" content="Valeska Calazans — Arquiteta e Urbanista e Designer de Sobrancelhas (Brow Boss). Design estratégico, nanopigmentação e lamination.">
+<meta property="og:title" content="Valeska Calazans">
+<meta property="og:description" content="Arquiteta & Urbanista · Designer de Sobrancelhas">
+<meta property="og:image" content="img/perfil.jpg">
+<meta name="theme-color" content="#14110f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%2314110f'/><text x='50' y='64' font-size='40' text-anchor='middle' fill='%23d6c19c' font-family='Georgia,serif' font-style='italic'>VC</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14110f;
+    --card:#1c1815;
+    --hair:rgba(214,193,156,.16);
+    --hair2:rgba(214,193,156,.32);
+    --champ:#d6c19c;
+    --champ2:#eadcc1;
+    --ivory:#efe8dc;
+    --taupe:#a39a8c;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(120% 60% at 50% 0%, #221c18 0%, rgba(20,17,15,0) 60%),
+      radial-gradient(90% 50% at 50% 100%, #1d1814 0%, rgba(20,17,15,0) 70%),
+      var(--bg);
+    color:var(--ivory);font-family:'Jost',system-ui,sans-serif;font-weight:300;line-height:1.5;
+    -webkit-font-smoothing:antialiased;min-height:100vh
+  }
+  /* grão sutil */
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.06;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:440px;margin:0 auto;padding:18px 18px 0}
+  .eyebrow{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--champ);font-weight:400}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;border-radius:200px 200px 26px 26px;overflow:hidden;aspect-ratio:4/5.25;background:#0f0d0b;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+  .hero::before{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid var(--hair2);z-index:3;pointer-events:none}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 16%;filter:saturate(.82) sepia(.08) contrast(.98) brightness(.97)}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,15,0) 42%,rgba(20,17,15,.45) 64%,rgba(20,17,15,.92) 88%,#14110f 100%)}
+  .hero .txt{position:absolute;left:0;right:0;bottom:30px;z-index:2;text-align:center;padding:0 24px}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:50px;line-height:.98;letter-spacing:.005em;margin-top:12px;color:var(--ivory)}
+  .hero h1 em{font-style:italic;color:var(--champ2)}
+  .rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:16px auto 0;color:var(--taupe);font-size:12.5px;letter-spacing:.06em}
+  .rule::before,.rule::after{content:"";width:28px;height:1px;background:var(--hair2)}
+  .social{display:flex;justify-content:center;gap:22px;margin-top:20px}
+  .social a{display:grid;place-items:center;width:20px;height:20px;opacity:.85;transition:opacity .4s var(--ease),transform .4s var(--ease)}
+  .social a:hover{opacity:1;transform:translateY(-2px)}
+  .social svg{width:17px;height:17px;fill:var(--champ2)}
+
+  .scroll{display:flex;flex-direction:column;align-items:center;gap:8px;margin:26px 0 6px;color:var(--taupe)}
+  .scroll i{width:1px;height:34px;background:linear-gradient(180deg,var(--champ),rgba(214,193,156,0));animation:drop 2.6s var(--ease) infinite}
+  @keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* ===== CARDS ===== */
+  .list{display:flex;flex-direction:column;gap:16px;margin-top:22px}
+  .card{position:relative;display:block;border-radius:24px;overflow:hidden;background:var(--card);min-height:212px;
+    box-shadow:0 24px 40px -28px rgba(0,0,0,.8);transition:transform .6s var(--ease)}
+  .card::before{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid var(--hair);z-index:4;pointer-events:none;transition:border-color .6s var(--ease)}
+  .card:hover{transform:translateY(-3px)}
+  .card:hover::before{border-color:var(--hair2)}
+  .card .ph{position:absolute;top:0;right:0;bottom:0;width:60%}
+  .card .ph img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.8) sepia(.1) brightness(.95);transition:transform 1.2s var(--ease)}
+  .card:hover .ph img{transform:scale(1.04)}
+  .card::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(90deg,var(--card) 38%,rgba(28,24,21,.86) 50%,rgba(28,24,21,.35) 66%,rgba(28,24,21,0) 82%)}
+  .card .in{position:relative;z-index:2;padding:22px 22px 20px;width:66%;min-height:212px;display:flex;flex-direction:column}
+  .card .num{display:flex;align-items:center;gap:10px}
+  .card .num::after{content:"";width:22px;height:1px;background:var(--hair2)}
+  .card h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:29px;line-height:1.02;margin-top:12px;color:var(--ivory)}
+  .card h2 em{font-style:italic;color:var(--champ2)}
+  .card p{font-size:12.8px;color:var(--taupe);margin-top:10px;line-height:1.55;letter-spacing:.01em}
+  .card .go{margin-top:auto;padding-top:16px;display:inline-flex;align-items:center;gap:12px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--champ2);font-weight:400}
+  .card .go i{display:block;width:26px;height:1px;background:var(--champ);position:relative;transition:width .5s var(--ease)}
+  .card .go i::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid var(--champ);border-right:1px solid var(--champ);transform:rotate(45deg)}
+  .card:hover .go i{width:40px}
+
+  .c-brow .ph img{object-position:30% 40%}
+  .c-arq  .ph img{object-position:50% 12%;filter:saturate(.75) sepia(.22) brightness(.7) contrast(1.05)}
+  .c-cup  .ph img{object-position:55% 30%}
+  .c-life .ph img{object-position:50% 24%}
+
+  /* cupom */
+  .brandlogo{display:block;align-self:flex-start;height:17px;width:auto;margin-top:16px;opacity:.95}
+  .card h2.h-cup{font-size:24px;margin-top:10px}
+  button.card{width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;border:none}
+  .code{display:inline-flex;align-items:center;gap:10px;margin-top:14px;align-self:flex-start;
+    font-family:'Cormorant Garamond',serif;font-weight:400;font-size:25px;letter-spacing:.32em;color:var(--champ2);
+    padding:5px 8px 5px 14px;border-top:1px solid var(--hair2);border-bottom:1px solid var(--hair2);transition:background .5s var(--ease)}
+  .c-cup.ok .code{background:rgba(214,193,156,.08)}
+
+  /* links secundários */
+  .mini{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+  .mini a{padding:15px 16px;border-radius:18px;border:1px solid var(--hair);background:rgba(28,24,21,.6);transition:border-color .5s var(--ease)}
+  .mini a:hover{border-color:var(--hair2)}
+  .mini .eyebrow{font-size:8.5px;letter-spacing:.34em}
+  .mini span{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--ivory);margin-top:4px}
+
+  footer{text-align:center;padding:54px 20px 38px}
+  footer .mono{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:30px;color:var(--champ);letter-spacing:.06em}
+  footer .eyebrow{display:block;margin-top:10px;color:var(--taupe);font-size:8.5px}
+  footer .cred{display:block;margin-top:22px;font-size:11px;color:#6e665b;letter-spacing:.04em}
+  footer .cred a{white-space:nowrap;color:var(--taupe);border-bottom:1px solid var(--hair2);padding-bottom:1px}
+
+  .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,24px);opacity:0;background:rgba(28,24,21,.92);backdrop-filter:blur(10px);
+    border:1px solid var(--hair2);color:var(--champ2);padding:12px 22px;border-radius:99px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;transition:.5s var(--ease);z-index:60;pointer-events:none;white-space:nowrap}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  .rv{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.scroll i{animation:none}}
+  @media (max-width:360px){.hero h1{font-size:42px}.card h2{font-size:25px}.card .in{width:74%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="img/hero.jpg" alt="Valeska Calazans">
+    <div class="txt">
+      <div class="eyebrow">Valeska Calazans</div>
+      <h1>A beleza está<br>nos <em>detalhes</em></h1>
+      <div class="rule">do olhar ao projeto</div>
+      <div class="social">
+        <a href="https://www.instagram.com/valeska_calazans/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm5.2-9.4a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM17 2H7a5 5 0 00-5 5v10a5 5 0 005 5h10a5 5 0 005-5V7a5 5 0 00-5-5zm3 15a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10a3 3 0 013 3z"/></svg></a>
+        <a href="https://wa.me/557591153837?text=Ol%C3%A1%2C%20Valeska!%20Vim%20pelo%20seu%20link%20do%20Instagram." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zM20.3 3.7C18.1 1.3 15.1 0 12 0 5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.6-8.1z"/></svg></a>
+        <a href="https://www.instagram.com/valeskabrowboss_/" target="_blank" rel="noopener" aria-label="Instagram Brow Boss"><svg viewBox="0 0 24 24"><path d="M12 5C6.5 5 2.3 8.6 1 12c1.3 3.4 5.5 7 11 7s9.7-3.6 11-7c-1.3-3.4-5.5-7-11-7zm0 11.5a4.5 4.5 0 110-9 4.5 4.5 0 010 9zm0-7a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/></svg></a>
+        <a href="https://dettaglitucano.github.io" target="_blank" rel="noopener" aria-label="Site Dettagli"><svg viewBox="0 0 24 24"><path d="M12 3L2 11h3v9h6v-6h2v6h6v-9h3z"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <a class="scroll" href="#links" aria-label="Ver links"><span class="eyebrow" style="color:var(--taupe)">Links</span><i></i></a>
+
+  <div class="list" id="links">
+
+    <!-- SOBRANCELHAS -->
+    <a class="card c-brow rv" href="https://wa.me/557591153837?text=Ol%C3%A1%2C%20Valeska!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20sobrancelhas." target="_blank" rel="noopener">
+      <div class="ph"><img src="img/perfil.jpg" alt="" loading="lazy"></div>
+      <div class="in">
+        <span class="num eyebrow">01 · Brow Boss</span>
+        <h2>Design de<br><em>sobrancelhas</em></h2>
+        <p>Design estratégico, nanopigmentação e lamination para realçar o seu olhar.</p>
+        <span class="go">Agendar <i></i></span>
+      </div>
+    </a>
+
+    <!-- ARQUITETURA -->
+    <a class="card c-arq rv" href="https://dettaglitucano.github.io" target="_blank" rel="noopener">
+      <div class="ph"><img src="img/estudio.jpg" alt="" loading="lazy"></div>
+      <div class="in">
+        <span class="num eyebrow">02 · Dettagli</span>
+        <h2>Arquitetura<br><em>&amp; urbanismo</em></h2>
+        <p>Projetos que unem funcionalidade e estética em cada detalhe.</p>
+        <span class="go">Conhecer <i></i></span>
+      </div>
+    </a>
+
+    <!-- CUPOM -->
+    <button class="card c-cup rv" type="button" data-code="LESKA" aria-label="Copiar cupom LESKA">
+      <div class="ph"><img src="img/treino.jpg" alt="" loading="lazy"></div>
+      <div class="in">
+        <span class="num eyebrow">03 · Parceria</span>
+        <img class="brandlogo" src="img/kaisan.svg" alt="Kaisan Brasil" width="865" height="242">
+        <h2 class="h-cup">Cupom <em>exclusivo</em></h2>
+        <span class="code">LESKA</span>
+        <span class="go"><span class="cp">Copiar cupom</span> <i></i></span>
+      </div>
+    </button>
+
+    <!-- LIFESTYLE -->
+    <a class="card c-life rv" href="https://www.instagram.com/valeska_calazans/" target="_blank" rel="noopener">
+      <div class="ph"><img src="img/hero.jpg" alt="" loading="lazy"></div>
+      <div class="in">
+        <span class="num eyebrow">04 · Lifestyle</span>
+        <h2>Rotina, treino<br><em>&amp; estilo</em></h2>
+        <p>Disciplina no treino, detalhe no trabalho.</p>
+        <span class="go">Acompanhar <i></i></span>
+      </div>
+    </a>
+
+    <div class="mini rv">
+      <a href="https://www.instagram.com/valeskabrowboss_/" target="_blank" rel="noopener"><div class="eyebrow">Resultados</div><span>@valeskabrowboss_</span></a>
+      <a href="https://www.instagram.com/dettagli_eng.arq/" target="_blank" rel="noopener"><div class="eyebrow">Projetos</div><span>@dettagli_eng.arq</span></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="mono">V · C</div>
+    <span class="eyebrow">Arquitetura · Sobrancelhas</span>
+    <span class="cred">© <span id="y"></span> Valeska Calazans · Desenvolvido por <a href="https://wa.me/5575992799894?text=Ol%C3%A1%2C%20Tallis!%20Vi%20a%20p%C3%A1gina%20da%20Valeska%20e%20quero%20uma%20assim." target="_blank" rel="noopener">Tallis do Carmo</a></span>
+  </footer>
+</div>
+
+<div class="toast" id="toast">Cupom LESKA copiado</div>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  const toast = document.getElementById('toast');
+  document.querySelectorAll('[data-code]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const code = btn.dataset.code;
+      try { await navigator.clipboard.writeText(code); }
+      catch (e) {
+        const t = document.createElement('textarea'); t.value = code;
+        document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); } catch (_) {}
+        t.remove();
+      }
+      btn.classList.add('ok'); btn.querySelector('.cp').textContent = 'Copiado';
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); btn.classList.remove('ok'); btn.querySelector('.cp').textContent = 'Copiar cupom'; }, 2200);
+    });
+  });
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
