@@ -131,6 +131,43 @@
     border:1px solid var(--hair2);color:var(--champ2);padding:12px 22px;border-radius:99px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;transition:.5s var(--ease);z-index:60;pointer-events:none;white-space:nowrap}
   .toast.show{opacity:1;transform:translate(-50%,0)}
 
+
+  /* ===== DESKTOP: três colunas ===== */
+  .tab{display:none}
+  @media (min-width:1024px){
+    body{display:flex;align-items:center}
+    .wrap{max-width:1240px;width:100%;padding:44px 40px 0;display:grid;
+      grid-template-columns:1.12fr 1fr .78fr;grid-template-rows:repeat(3,minmax(212px,auto)) auto;column-gap:22px;row-gap:16px}
+    .list{display:contents}
+    .scroll{display:none}
+    .hero{grid-column:1;grid-row:1/4;aspect-ratio:auto;min-height:680px;border-radius:240px 240px 28px 28px}
+    .hero h1{font-size:60px}
+    .hero .txt{bottom:40px}
+    .c-brow{grid-column:2;grid-row:1}
+    .c-arq{grid-column:2;grid-row:2}
+    .c-life{grid-column:2;grid-row:3}
+    .card .in{width:64%}
+    footer{grid-column:1/-1;padding-top:40px}
+
+    /* coluna do cupom */
+    .c-cup{grid-column:3;grid-row:1/4;display:flex;flex-direction:column;overflow:visible;border-radius:28px}
+    .c-cup .ph{position:absolute;left:0;right:0;top:0;bottom:auto;width:100%;height:64%;border-radius:28px 28px 0 0;overflow:hidden}
+    .c-cup .ph img{object-position:50% 22%}
+    .c-cup::after{border-radius:28px;background:linear-gradient(180deg,rgba(28,24,21,0) 30%,rgba(28,24,21,.7) 50%,var(--card) 64%)}
+    .c-cup .in{width:100%;min-height:100%;flex:1;justify-content:flex-end;align-items:center;text-align:center;padding:28px 26px 26px}
+    .c-cup .num::after{display:none}
+    .c-cup .brandlogo{align-self:center;height:22px;margin-top:14px}
+    .c-cup h2.h-cup{font-size:34px;margin-top:10px}
+    .c-cup .code{align-self:center;font-size:16px;padding:9px 20px;margin-top:16px}
+    .c-cup .copy{margin-top:20px;padding:14px 18px;width:100%;justify-content:center;border-radius:16px;background:var(--champ);color:#1c1815;font-weight:400;transition:background .4s var(--ease)}
+    .c-cup .copy i{border-color:rgba(28,24,21,.35)}
+    .c-cup .copy svg{stroke:#1c1815}
+    .c-cup:hover .copy{background:var(--champ2)}
+    .c-cup:hover .copy i{background:transparent;border-color:rgba(28,24,21,.5)}
+    .c-cup .tab{display:block;position:absolute;top:-1px;left:50%;transform:translateX(-50%);z-index:5;
+      background:var(--bg);padding:9px 26px 10px;border:1px solid var(--hair);border-top:none;border-radius:0 0 16px 16px;color:var(--champ2)}
+  }
+
   .rv{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
   .rv.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.scroll i{animation:none}}
@@ -184,6 +221,7 @@
 
     <!-- CUPOM -->
     <button class="card c-cup rv" type="button" data-code="LESKA" aria-label="Copiar cupom LESKA">
+      <span class="tab eyebrow">Cupom</span>
       <div class="ph"><img src="img/treino.jpg" alt="" loading="lazy"></div>
       <div class="in">
         <span class="num eyebrow">03 · Parceria</span>
